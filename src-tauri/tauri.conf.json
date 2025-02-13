@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "TMA Installer",
+  "version": "1.1.7",
+  "identifier": "com.toomanyaccounts.installer",
+
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+
+  "app": {
+    "windows": [
+      {
+        "title": "TMA Installer",
+        "backgroundColor": "#2f2f2f",
+        "width": 800,
+        "height": 300,
+        "resizable": false,
+        "minimizable": false,
+        "maximizable": false,
+        "closable": true,
+        "theme": "Dark"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+
+  "bundle": {
+    "active": true,
+    "targets": "msi",
+    "createUpdaterArtifacts": true,
+    "windows": {
+      "webviewInstallMode": {
+        "silent": false,
+        "type": "offlineInstaller"
+      }
+    },
+    "icon": [
+      "icons/icon.ico"
+    ]
+  },
+
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJDNzc1MkVBNjE2NjE3N0MKUldSOEYyWmg2bEozTEg5U2xPYUU2Q1VFcDdmTDVLYWU0eS91ckNGMlRDNlU5dWt1ekIyZTExMUEK",
+      "endpoints": [
+        "https://toomanyaccounts.org/updater/{{target}}/{{current_version}}"
+      ]
+    }
+  }
+}
