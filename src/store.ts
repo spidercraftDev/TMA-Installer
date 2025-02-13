@@ -1,4 +1,4 @@
-import { reactive, Ref, ref } from "vue";
+import { reactive } from "vue";
 
 interface Store {
     loggedIn: boolean;

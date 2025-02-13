@@ -4,10 +4,8 @@
 - Install [Rust](https://www.rust-lang.org/) and [NodeJS](https://nodejs.org/)
 - Install pnpm globally `npm i -g pnpm`
 - Run `pnpm install` to install dependencies
+- Go to `src-tauri/src/lib.rs` and remove this line `.plugin(tauri_plugin_updater::Builder::new().build())`
 - You can then run `pnpm tauri dev` or `pnpm tauri build`
-
-
-⚠️ Please note that the installer is open source but the updater logic is still here.
 
 ## License
 
