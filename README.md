@@ -15,4 +15,4 @@ You may use, modify, and distribute this software **only for the purpose of buil
 
 **You are not allowed** to use any part of this software in other projects, whether personal or commercial.  
 
-For more details, see the [LICENSE](./LICENSE) file.
+For more details, see the [LICENSE](./.github/LICENSE) file.
